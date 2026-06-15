@@ -1,23 +1,23 @@
-class Counter{
-        int count;
-        public synchronized void increment(){
-            // we have used synchronized to avoid race condition and to 
-            // make sure that only one thread can access this method at a time 
-            count++;
-            .
-        }
+class Counter {
+    int count;
+
+    public synchronized void increment() {
+        // we have used synchronized to avoid race condition and to
+        // make sure that only one thread can access this method at a time
+        count++;
     }
+}
 
 public class racecondition {
     public static void main(String[] args) throws InterruptedException {
         Counter c = new Counter();
         Runnable obj1 = () -> {
-            for(int i=0;i<=10000;i++){
+            for (int i = 0; i <= 10000; i++) {
                 c.increment();
             }
         };
         Runnable obj2 = () -> {
-            for(int i=0;i<=10000;i++){
+            for (int i = 0; i <= 10000; i++) {
                 c.increment();
             }
         };
@@ -30,5 +30,5 @@ public class racecondition {
         // finish before printing the count
         t2.join();
         System.out.println(c.count);
-      }
     }
+}
