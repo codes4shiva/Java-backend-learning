@@ -15,3 +15,4 @@ public class exceptionhandling {
 //runtime error is called as exception
 // exception handling is a mechanism to handle runtime errors and maintain
 // the normal flow of the program
+// thr 
