@@ -1,0 +1,16 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="alien" class="com.shivanshu.Alien">
+<!--      <constructor-arg  name="age" value="10"/>-->
+<!--      <constructor-arg index = "1" ref="lap1" />-->
+      <property name="age" value="20"> </property>
+      <property name="lap" ref="lap1"> </property>
+   </bean>
+   
+   <bean id="lap" class="com.shivanshu.Laptop"> </bean>
+</beans>
+
